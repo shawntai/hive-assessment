@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Dropdown from "./dropdown/Dropdown";
 
-function App() {
+const App = () => {
+  const options = [
+    {value: "argentina", label: "Argentina"},
+    {value: "taiwan", label: "Taiwan"},
+    {value: "argentdina", label: "Aasargentina"},
+    {value: "taiwdsan", label: "Taiwasasasn"},
+    {value: "argedsntina", label: "Argensdasasatina"},
+    {value: "taxsxiwan", label: "Taiwzczccan"},
+    {value: "argexsxsntina", label: "Argecxcxntina"},
+    {value: "taiwccsan", label: "Taiwdsxsdsxxan"},
+    {value: "argenerfetina", label: "Argentxsxsxina"},
+    {value: "taiwrean", label: "Taicsxzcwan"},
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Dropdown options={options} mode="multiple" />
+      <Dropdown options={options} mode="single" />
+    </>
+  )
 }
 
 export default App;
